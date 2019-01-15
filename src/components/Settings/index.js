@@ -31,7 +31,6 @@ const PlusButton = ({ onClick }) => (
 );
 
 const Settings = ({ settingsOpened, settingsInput, toggleSettings, changeSettings, submitSettings }) => {
-    console.log(toggleSettings)
     return (
         <div className="settings">
             { settingsOpened && (

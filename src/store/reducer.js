@@ -11,7 +11,9 @@ const TOGGLE_SETTINGS = 'TOOGLE_SETTINGS';
 const CHANGE_SETTINGS = "CHANGE_SETTINGS";
 const SUBMIT_SETTINGS = "SUBMIT_SETTINGS";
 const MESSAGE_CHANGE = 'MESSAGE_CHANGE';
-const MESSAGE_SUBMIT = 'MESSAGE_SUBMIT';
+export const MESSAGE_SUBMIT = 'MESSAGE_SUBMIT';
+export const WEBSOCKET_CONNECT = 'WEBSOCKET_CONNECT';
+export const NEW_MESSAGE = 'NEW_MESSAGE';
 
 
 // Reducer
@@ -40,11 +42,12 @@ const reducer = (state = initialState, action = {}) => {
         case MESSAGE_SUBMIT:
             return {
                 ...state,
-                messages: [...state.messages, {
-                    autor: state.settingsInput,
-                    message: state.messageInput ,
-                }],
                 messageInput: '',
+            }
+        case NEW_MESSAGE:
+            return {
+                ...state,
+                messages: [...state.messages, action.message]
             }
         default:
             return state;
@@ -56,7 +59,6 @@ const reducer = (state = initialState, action = {}) => {
 
 
 export const toggleSettings = () => {
-    console.log('action created');
     return {
         type: TOGGLE_SETTINGS,
     };
@@ -77,6 +79,15 @@ export const messageSubmit = () => ({
 export const messageChange = (text) => ({
     type: MESSAGE_CHANGE,
     text,
+});
+
+export const websocketConnect = () => ({
+    type: WEBSOCKET_CONNECT,
+});
+
+export const newMessage = (message) => ({
+    type: NEW_MESSAGE,
+    message,
 });
 
 export default reducer;

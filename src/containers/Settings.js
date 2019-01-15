@@ -12,7 +12,6 @@ const mapDispatchToProps = (dispatch) => ({
         dispatch(changeSettings(text));
     },
     toggleSettings: () => {
-        console.log('Action ready to be emmited');
         dispatch(toggleSettings());
     },
     submitSettings: () => {
