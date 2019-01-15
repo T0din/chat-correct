@@ -1,0 +1,23 @@
+#messages {
+    & .message {
+        padding: .2em;
+        border-bottom: 1px solid #efefef;
+        display: flex;
+        & .image {
+
+            width: 50px;
+            height: 50px;
+        }
+        & .info {
+            padding: 0 15px;
+        }
+        & .info .autor {
+            font-size: 0.9em;
+            color: #444;
+        }
+        & .info .message-text {
+            font-size: 1.2em;
+            color: #222;
+        }
+    }
+}

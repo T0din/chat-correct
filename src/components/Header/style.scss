@@ -1,0 +1,20 @@
+#header {
+    display: flex;
+    height: 40px;
+    background: #cdcdcd;
+    justify-content: space-between;
+    & .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.7em;
+        padding: .3em;
+    }
+    & .settings {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.7em;
+        padding: .3em;
+    }
+}
