@@ -2,10 +2,10 @@ import React from 'react'
 import Settings from '../../containers/Settings';
 import './style.scss';
 
-const Logo =() => (
+const Logo = () => (
     <div className="logo">
-    <p>Logo</p>
-</div>
+        <div>Logo</div>
+    </div>
 );
 
 const Header = () => (

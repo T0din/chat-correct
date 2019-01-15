@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Header from './components/Header';
-import Messages from './components/Messages';
-import FormMessage from './components/FormMessage';
+import Messages from './containers/Messages';
+import FormMessage from './containers/FormMessage';
 import './App.scss';
 
 class App extends Component {

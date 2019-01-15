@@ -1,25 +1,21 @@
 import React from 'react';
 import './style.scss';
 
-const Messages = () => (
+const Messages = ({ messages }) => (
     <div id="messages">
-        <Message />
-        <Message />
-        <Message />
-        <Message />
-        <Message />
+        { messages.map(message => <Message key={message.message} {...message}/>) }
     </div>
 );
 
-const Message = () => (
+const Message = ({ autor, message }) => (
     <div className="message">
         <img src="https://image.freepik.com/free-icon/male-user-shadow_318-34042.jpg" alt="" className="image"/>
         <div className="info">
             <p className="autor">
-                Tony
+                { autor }
             </p>
             <p className="message-text">
-                Hello there !
+                { message }
             </p>
         </div>
         
